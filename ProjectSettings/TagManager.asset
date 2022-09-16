@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - knickknack1
+  - knickknack2
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - knickknack1
   - Water
   - UI
-  - 
+  - knickknack2
   - 
   - 
   - 
@@ -40,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: knickknack1
+    uniqueID: 2596668837
+    locked: 0
+  - name: knickknack2
+    uniqueID: 4227135577
     locked: 0

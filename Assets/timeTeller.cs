@@ -23,7 +23,7 @@ public class timeTeller : MonoBehaviour
 
     public GameObject timeTextObject;
         // add your personal API key after APPID= and before &units=
-        string url = "http://worldtimeapi.org/api/timezone/America/Argentina/Salta";
+        string url = "http://worldtimeapi.org/api/timezone/Atlantic/Bermuda";
    
     void Start()
     {
@@ -71,6 +71,12 @@ public class timeTeller : MonoBehaviour
                 int hour = int.Parse(localTime.Substring(0,2));
                 Debug.Log(":\nhour found: " + hour);
                 if(hour < 12) { // add AM or PM depending
+                    if(hour == 0)
+                    {
+                        hour = 12
+                    }
+                    string tempString = localTime.Substring(2, 3);
+                    localTime = "" + hour + tempString;
                     timeTextObject.GetComponent<TextMeshPro>().text = "" + localTime.ToString() + " AM";
                 }
                 else{
