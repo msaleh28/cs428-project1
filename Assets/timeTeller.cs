@@ -73,7 +73,7 @@ public class timeTeller : MonoBehaviour
                 if(hour < 12) { // add AM or PM depending
                     if(hour == 0)
                     {
-                        hour = 12
+                        hour = 12;
                     }
                     string tempString = localTime.Substring(2, 3);
                     localTime = "" + hour + tempString;
